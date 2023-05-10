@@ -1,15 +1,15 @@
 import React from "react";
 import { useCount } from "../contexts/CountContextProvider";
 
-const count = () => {
-  const { getPlus, counter } = useCount();
+const Count = () => {
+  const { getPlus, counter, getMinus } = useCount();
   return (
     <div>
       <h1>{counter}</h1>
       <button onClick={getPlus}>plus</button>
-      <button>minus</button>
+      <button onClick={getMinus}>minus</button>
     </div>
   );
 };
 
-export default count;
+export default Count;

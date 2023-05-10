@@ -42,11 +42,20 @@ const CountContextProvider = ({ children }) => {
     });
   };
 
+  const getMinus = () => {
+    let res = state.counter - 1;
+    dispatch({
+      type: "COUNTER",
+      payload: res,
+    });
+  };
+
   let values = {
     getProducts,
     products: state.products,
     getPlus,
     counter: state.counter,
+    getMinus,
   };
 
   return (
